@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/homePage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./My Portfolio_files/style.css">
+    
+</head>
+<body>
+    <section class="hero">
+        <nav id="desktopNav">
+            <div>
+                <ul class="navLinks">
+                    <li><a href="http://127.0.0.1:5500/homePage.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/educationPage.html">Education</a></li>
+                    <li><a href="http://127.0.0.1:5500/resumePage.html">Resume</a></li>
+                    <li><a href="http://127.0.0.1:5500/projectsPage.html">Projects</a></li>
+                    <li><a href="http://127.0.0.1:5500/contactPage.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="homeLayout">
+            <div class="textblock">
+                <div class="introText">
+                    <h1>Hey, I'm Owen O'Neil</h1>
+                </div>
+                <div class="aboutMe">
+                    <h3>I’m a Computer Science student at the University of Tampa 
+                        with a strong interest in building practical skills and 
+                        learning how real systems work. Alongside my technical 
+                        studies, I’ve gained experience in hands-on and 
+                        customer-facing roles that taught me responsibility, 
+                        problem solving, and how to work well with others. 
+                        I value steady growth, clear communication, and forming 
+                        meaningful professional connections, and I’m motivated to 
+                        keep developing both personally and technically through 
+                        real-world opportunities.</h3>
+                </div>
+            
+                <div class="relatedButtons">
+                    <a href="https://github.com/Owen7117" class="imageButton">
+                        <img src="./My Portfolio_files/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/owen-o-neil-0a0678290/" class="imageButton">
+                        <img src="./My Portfolio_files/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/owen_7117/" class="imageButton">
+                        <img src="./My Portfolio_files/instagram-icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="personalPic">
+                <img src="./My Portfolio_files/freddy.jpeg" alt="person">
+            </div>
+        </div>    
+
+    </section>
+    <script src="./My Portfolio_files/script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

@@ -1,0 +1,490 @@
+/* general styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(237, 237, 237);  
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#desktopNav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.navLinks a {
+    color: black;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navLinks a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+/* Hamburger menue */
+
+#hamburgerNav {
+    display: none;
+}
+
+.hamburgerMenue {
+    display: flex;
+    cursor: pointer;
+}
+
+.hamburgerImage{
+    display: flex;
+    flex-direction: coolumn;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.homeProfile {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin-top: 8rem;
+    gap: 1rem;
+}
+
+.leftSideHome {
+    flex: 1 1 0;
+    text-align: right;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;  
+    font-size: 1.5rem;
+    padding-bottom: 6rem;
+}
+
+.centerHome {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSideHome {
+    flex: 1 1 0;
+    font-size: 1.5rem;
+    display: flex;
+    text-align: left;
+    padding-bottom: 6rem;
+}
+
+.relatedButtonsHome {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.imageButton img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0);
+    transition: transform 0.3s;
+}
+
+.imageButton img:hover {
+    transform: scale(1.2);
+}
+
+.personalPic {
+    width: 420px;
+    height: 420px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.25s ease, border-radius 0.25s ease;
+}
+
+.personalPic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.CVandConnectButtonsHome {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.CV {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 9rem;
+}
+
+.CV:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s
+}
+
+.connectBtn {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 9rem;
+}
+
+.connectBtn:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s
+}
+
+.AboutMeSection {
+    margin-top: 8rem;
+    padding: 2rem;
+}
+
+.aboutMeTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.aboutMeContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.leftColumnAbout {
+    flex: 0 0 60%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutMeBox {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 200px;
+}
+
+.aboutMeBox p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.educationBox {
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.educationBox h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+}
+
+.educationBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.educationBox li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.rightColumnAbout {
+    flex: 0 0 40%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+
+.pictureBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gpa {
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.skillsSection {
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+.skillsTitle {
+    font-size: 2.5rem;
+    margin-bottom: 6.6rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.skillsContainer {
+    display: flex;
+    gap: 3rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.skillColumn {
+    flex: 1;
+    min-width: 180px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skillColumn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.skillColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillColumn li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skillName {
+    font-weight: 500;
+}
+
+.skillLevel {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+.projectsSection {
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+.projectsTitle {
+    font-size: 2.5rem;
+    margin-bottom: 6.6rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.projectsContainer {
+    display: flex;
+    gap: 3rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.projectCard {
+    flex: 1;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projectImage {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectCard h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.projectCard p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: auto;
+}
+
+.projectBtn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.projectBtn:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+.WorkInProgress{
+    background-color: white;
+    min-height: 100vh;
+}
+
+.WorkInProgress img {
+    width: 96%;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.WorkInProgress p {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+    background-color: white;
+}
+
+.contactTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 6.6rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.contactSection {
+    margin-top: 6rem;
+    padding: 4rem 2rem;
+}
+
+.contactContainer {
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 5rem;
+}
+
+.contactText {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactItem {
+    font-size: 1.1rem;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contactItem:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.3s
+}
+
+.footer p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
