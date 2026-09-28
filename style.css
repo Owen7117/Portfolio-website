@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
 :root {
     --bg: #F4F6F9;
@@ -6,12 +6,12 @@
     --ink: #15213B;
     --text: #3A4660;
     --muted: #56627A;
-    --accent: #1D6A86;
-    --accentDark: #14506A;
-    --accentSoft: #E3EFF4;
+    --accent: #1F4E79;
+    --accentDark: #163A59;
+    --accentSoft: #E6ECF3;
     --border: #DBE1EA;
     --shadow: 0 6px 20px rgba(21, 33, 59, 0.08);
-    --headingFont: 'Sora', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --headingFont: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
     --bodyFont: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
