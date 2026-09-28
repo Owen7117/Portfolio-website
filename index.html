@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Media.css">
+
+</head>
+<body>
+    <section class="hero">
+        <nav id="desktopNav">
+            <div>
+                <ul class="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburgerNav">
+            <div class="hamburgerMenue" onclick="toggleMenue()">
+                <div class="hamburgerImage">
+                    <img src="images/hamburgericon.webp" alt="Hamburger Menue Icon">
+                </div>
+            </div>
+            <div class="mobileLinksHidden">
+                <ul class="navLinksMobile">
+                    <li><a href="#about" onclick="toggleMenue()">About</a></li>
+                    <li><a href="#skills" onclick="toggleMenue()">Skills</a></li>
+                    <li><a href="#projects" onclick="toggleMenue()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenue()">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="homeProfile">
+            <div class="leftSideHome">
+                <h1>Hello, I'm</h1>
+            </div>
+
+            <div class="centerHome">
+                <div class="personalPic">
+                    <img src="images/selfImage.jpeg" alt="Owen O'Neil">
+                </div>
+                
+                <div class="CVandConnectButtonsHome">
+                    <button class="CV" 
+                    onclick="window.open('Owen O\'Neil Resume Updated 1-1-2026.pdf')">
+                    Download CV
+                </button>
+                    <button class="connectBtn" 
+                    onclick="location.href='#contact'">
+                    Contact
+                </button>
+
+                </div>
+
+                <div class="relatedButtonsHome">
+                    <a href="https://github.com/Owen7117" class="imageButton">
+                        <img src="images/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/owen-o-neil-0a0678290/" class="imageButton">
+                        <img src="images/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/owen_7117/" class="imageButton">
+                        <img src="images/instagram-icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="rightSideHome">
+                <h1>Owen O'Neil</h1>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="AboutMeSection">
+        <div class="aboutMeTitle">
+            <h2>About Me</h2>
+        </div>
+        <div class="aboutMeContainer">
+            <div class="leftColumnAbout">
+                <div class="aboutMeBox">
+                    <p>I’m a Computer Science student at the University of Tampa 
+                        with a strong interest in building practical skills and 
+                        learning how real systems work. Alongside my technical 
+                        studies, I’ve gained experience in hands-on and 
+                        customer-facing roles that taught me responsibility, 
+                        problem solving, and how to work well with others. 
+                        I value steady growth, clear communication, and forming 
+                        meaningful professional connections, and I’m motivated to 
+                        keep developing both personally and technically through 
+                        real-world opportunities.</p>
+                </div>
+
+                <div class="educationBox">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>High School Diploma, Moses Brown School (Graduated: May 2023)</li>
+                        <li>Bachelor of Science in Computer Science, Minor in Data Science, University of Tampa (Expected Graduation: May 2027)</li>
+                    </ul>
+                    <div class="gpa">
+                        <strong>Current GPA:</strong> 3.89/4.0
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightColumnAbout">
+                <div class="pictureBox">
+                    <img src="images/wholeBodyPic.jpeg" alt="Owen O'Neil">
+            </div>
+        </div>
+    </section>
+    <section id="skills" class= "skillsSection">
+        <div class="skillsTitle">
+            <h2>Skills</h2>
+        </div>
+        <div class="skillsContainer">
+            <div class="skillColumn">
+                <h3>Languages</h3>
+                <ul>
+                    <li><span class="skillName">Python</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Java</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">C</span><span class="skillLevel">Intermediate</span></li>
+                    <li><span class="skillName">HTML/CSS</span><span class="skillLevel">Intermediate</span></li>
+                </ul>
+            </div>
+            <div class="skillColumn">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li><span class="skillName">Git</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Node.js</span><span class="skillLevel">Intermediate</span></li>
+                    <li><span class="skillName">Jetbrains</span><span class="skillLevel">Intermediate</span></li>
+                    <li><span class="skillName">VSCode</span><span class="skillLevel">intermediate</span></li>
+                    <li><span class="skillName">SQL</span><span class="skillLevel">Beginer</span></li>
+                </ul>
+            </div>
+            <div class="skillColumn">
+                <h3>Other Skills</h3>
+                <ul>
+                    <li><span class="skillName">Team Building</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Critical Thinking</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Customer service</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Time Management</span><span class="skillLevel">Advanced</span></li>
+                    <li><span class="skillName">Soldering</span><span class="skillLevel">Advanced</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projectsSection">
+    <div class="projectsTitle">
+        <h2>Projects</h2>
+    </div>
+    <div class="projectsContainer">
+        <div class="projectCard">
+            <div class="projectImage">
+                <img src="images/securityCam.jpg" alt="Security app">
+            </div>
+            <h3>URI Grant</h3>
+            <p>Prototype application that boosts community camera security by training an AI model for threat
+                detection and implementing blockchain.</p>
+            <button class="projectBtn" onclick="window.location.href='WorkInProgressPage.html'">View</button>
+        </div>
+        <div class="projectCard">
+            <div class="projectImage">
+                <img src="images/TPPC.webp" alt="TPPC">
+            </div>
+            <h3>TPPC Group Project</h3>
+            <p>Website for the Tampa Palms Professional Center.</p>
+            <button class="projectBtn" onclick="location.href='https://tppcgroup5.vercel.app'">View</button>
+        </div>
+        <div class="projectCard">
+            <div class="projectImage">
+                <img src="images/Cirt.jpg" alt="Cirt">
+            </div>
+            <h3>CIRT Group Project</h3>
+            <p>Website for the University of Tampa Criminology Institute of Research and Technology.</p>
+            <button class="projectBtn" onclick="location.href='https://cirt.vercel.app'">View</button>
+        </div>
+    </div>
+</section>
+<section id="contact" class="contactSection">
+    <div class="contactTitle">
+        <h2>Contact</h2>
+    </div>
+
+    <div class="contactContainer">
+        <p class="contactText">
+            Feel free to reach out if you’d like to connect, collaborate, or ask a question.
+        </p>
+
+        <div class="contactInfo">
+            <a href="mailto:owenmoneil2005@gmail.com" class="contactItem">
+                owenmoneil2005@gmail.com
+            </a>
+
+            <a href="https://www.linkedin.com/in/owen-o-neil-0a0678290/" 
+               target="_blank" 
+               class="contactItem">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/Owen7117" 
+               target="_blank" 
+               class="contactItem">
+                GitHub
+            </a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <p>© 2026 Owen O'Neil. All rights reserved.</p>
+
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
