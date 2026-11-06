@@ -1,0 +1,152 @@
+@media screen and (max-width: 800px) {
+    #desktopNav {
+        display: none;
+    }
+
+    #hamburgerNav{
+        display: flex;
+        justify-content: flex-start;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .mobileLinksHidden {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        z-index: 100;
+        min-width: 150px;
+    }
+
+    .mobileLinksHidden.active {
+        display: flex;
+    }
+
+    .navLinksMobile {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navLinksMobile li {
+        width: 100%;
+    }
+
+    .navLinksMobile a {
+        display: block;
+        padding: 1rem;
+        color: black;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-bottom: none;
+    }
+
+    .navLinksMobile a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+    }
+
+    .homeProfile {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .leftSideHome {
+        order: 1;
+        font-size: 1.5rem;
+        flex: none;
+        padding-bottom: 0;  
+        margin-bottom: 0;
+    }
+
+    .rightSideHome {
+        order: 2;
+        margin: 0; 
+        padding: 0;
+    }
+
+    .centerHome {
+        order: 3;
+    }
+
+    .CVandConnectButtonsHome,
+    .relatedButtonsHome {
+        order: 4;
+    }
+
+    .aboutMeContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftColumnAbout,
+    .rightColumnAbout {
+        width: 100%;
+        max-width: 700px;
+}
+    .educationBox {
+        order: 2;
+    }
+
+    .pictureBox {
+        width: 100%;
+        height: auto;
+    }
+
+    .pictureBox img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .skillsContainer {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .skillColumn {
+        max-width: 100%;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .skillColumn h3 {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .skillColumn li {
+        font-size: 0.95rem;
+    }
+
+    .projectsContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .projectCard {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .projectImage {
+        height: 200px;
+    }
+
+    .projectsSection {
+        padding: 3rem 1.5rem;
+    }
+
+    .projectsTitle {
+        margin-bottom: 3rem;
+    }
+}

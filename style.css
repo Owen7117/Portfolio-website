@@ -1,23 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+/* general styles */
 
-:root {
-    --bg: #F4F6F9;
-    --surface: #FFFFFF;
-    --ink: #15213B;
-    --text: #3A4660;
-    --muted: #56627A;
-    --accent: #1F4E79;
-    --accentDark: #163A59;
-    --accentSoft: #E6ECF3;
-    --border: #DBE1EA;
-    --shadow: 0 6px 20px rgba(21, 33, 59, 0.08);
-    --headingFont: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
-    --bodyFont: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
 }
 
 * {
@@ -26,53 +12,21 @@ html {
 }
 
 body {
-    font-family: var(--bodyFont);
-    background-color: var(--bg);
-    color: var(--ink);
-    -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3 {
-    font-family: var(--headingFont);
-    color: var(--ink);
-    letter-spacing: -0.01em;
-}
-
-a:focus-visible,
-button:focus-visible,
-[role="button"]:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(237, 237, 237);  
 }
 
 .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 4.5rem;
 }
 
+
 #desktopNav {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
     display: flex;
     justify-content: center;
-    width: max-content;
-    max-width: calc(100% - 2rem);
-    box-sizing: border-box;
-    padding: 0.9rem 2.5rem;
-    background-color: rgba(255, 255, 255, 0.88);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    box-shadow: 0 10px 30px rgba(21, 33, 59, 0.1);
+    padding: 1rem;
 }
 
 .navLinks {
@@ -82,22 +36,20 @@ button:focus-visible,
 }
 
 .navLinks a {
-    color: var(--ink);
-    font-family: var(--headingFont);
-    font-size: 1.1rem;
-    font-weight: 500;
+    color: black;
+    font-size: 1.5rem;
     display: inline-block;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
 }
 
 .navLinks a:hover {
-    color: var(--accent);
-    transform: scale(1.08);
+    transform: scale(1.1);
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.45rem;
+    text-underline-offset: 0.5rem;
 }
+
+/* Hamburger menue */
 
 #hamburgerNav {
     display: none;
@@ -108,19 +60,14 @@ button:focus-visible,
     cursor: pointer;
 }
 
-.hamburgerImage {
+.hamburgerImage{
     display: flex;
-    flex-direction: column;
-    width: 40px;
-    height: 40px;
+    flex-direction: coolumn;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 
-.hamburgerImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
 .homeProfile {
     display: flex;
@@ -133,13 +80,11 @@ button:focus-visible,
 .leftSideHome {
     flex: 1 1 0;
     text-align: right;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;  
     font-size: 1.5rem;
     padding-bottom: 6rem;
-}
-
-.leftSideHome h1 {
-    font-weight: 500;
-    color: var(--muted);
 }
 
 .centerHome {
@@ -157,11 +102,6 @@ button:focus-visible,
     padding-bottom: 6rem;
 }
 
-.rightSideHome h1 {
-    font-weight: 700;
-    color: var(--ink);
-}
-
 .relatedButtonsHome {
     display: flex;
     gap: 2rem;
@@ -170,17 +110,14 @@ button:focus-visible,
 }
 
 .imageButton img {
-    display: block;
     width: 30px;
     height: 30px;
     filter: brightness(0);
-    opacity: 0.8;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s;
 }
 
 .imageButton img:hover {
     transform: scale(1.2);
-    opacity: 1;
 }
 
 .personalPic {
@@ -190,8 +127,7 @@ button:focus-visible,
     margin-left: 1rem;
     overflow: hidden;
     border-radius: 50%;
-    border: 6px solid var(--surface);
-    box-shadow: 0 0 0 1px var(--border), 0 20px 40px rgba(21, 33, 59, 0.12);
+    transition: transform 0.25s ease, border-radius 0.25s ease;
 }
 
 .personalPic img {
@@ -200,6 +136,7 @@ button:focus-visible,
     object-fit: cover;
 }
 
+
 .CVandConnectButtonsHome {
     display: flex;
     gap: 2rem;
@@ -207,44 +144,34 @@ button:focus-visible,
     justify-content: center;
 }
 
-.CV,
-.connectBtn {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 9rem;
-    padding: 1rem;
-    border-radius: 8px;
-    font-family: var(--headingFont);
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
 .CV {
-    background-color: var(--accent);
-    color: #FFFFFF;
-    border: 2px solid var(--accent);
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 9rem;
 }
 
 .CV:hover {
-    background-color: var(--accentDark);
-    border-color: var(--accentDark);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    transition: transform 0.3s
 }
 
 .connectBtn {
-    background-color: var(--surface);
-    color: var(--accent);
-    border: 2px solid var(--accent);
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 9rem;
 }
 
 .connectBtn:hover {
-    background-color: var(--accent);
-    color: #FFFFFF;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    transition: transform 0.3s
 }
 
 .AboutMeSection {
@@ -252,32 +179,17 @@ button:focus-visible,
     padding: 2rem;
 }
 
-.aboutMeTitle,
-.skillsTitle,
-.projectsTitle,
-.contactTitle {
+.aboutMeTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     text-decoration: underline;
-    text-decoration-color: var(--accent);
-    text-decoration-thickness: 3px;
     text-underline-offset: 1rem;
-}
-
-.aboutMeTitle h2,
-.skillsTitle h2,
-.projectsTitle h2,
-.contactTitle h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-
-.aboutMeTitle {
-    margin-bottom: 3rem;
 }
 
 .aboutMeContainer {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 3rem;
     max-width: 1100px;
     margin: 0 auto;
@@ -296,25 +208,24 @@ button:focus-visible,
 .aboutMeBox {
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--surface);
-    border: 1px solid var(--border);
+    background-color: rgb(237, 237, 237);
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1rem;
     min-height: 200px;
 }
 
 .aboutMeBox p {
     font-size: 1.2rem;
-    line-height: 1.7;
-    color: var(--text);
+    line-height: 1.6;
+    color: #333;
 }
 
 .educationBox {
     box-sizing: border-box;
-    padding: 1.5rem;
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
     border-radius: 10px;
     width: 100%;
 }
@@ -333,35 +244,29 @@ button:focus-visible,
 .educationBox li {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--text);
+    color: #333;
     margin-bottom: 1.5rem;
 }
 
 .rightColumnAbout {
-    flex: 0 0 calc(40% - 3rem);
-    max-width: calc(40% - 3rem);
+    flex: 0 0 40%;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     min-height: 500px;
 }
 
-.pictureBox {
-    flex: 1;
-    display: flex;
-}
 
 .pictureBox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: var(--shadow);
 }
 
 .gpa {
-    font-weight: 700;
+    font-weight: bold;
     margin-top: 2rem;
-    color: var(--ink);
 }
 
 .skillsSection {
@@ -370,7 +275,11 @@ button:focus-visible,
 }
 
 .skillsTitle {
+    font-size: 2.5rem;
     margin-bottom: 6.6rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
 }
 
 .skillsContainer {
@@ -386,16 +295,14 @@ button:focus-visible,
     flex: 1;
     min-width: 180px;
     max-width: 300px;
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 4px solid var(--accent);
+    background-color: white;
     border-radius: 10px;
     padding: 2.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .skillColumn h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 2.5rem;
     text-align: center;
 }
@@ -409,27 +316,21 @@ button:focus-visible,
 .skillColumn li {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--text);
+    color: #333;
     gap: 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 1rem;
 }
 
 .skillName {
-    font-weight: 600;
-    color: var(--ink);
+    font-weight: 500;
 }
 
 .skillLevel {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accentDark);
-    background-color: var(--accentSoft);
-    padding: 0.1rem 0.7rem;
-    border-radius: 999px;
-    white-space: nowrap;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
 }
 
 .projectsSection {
@@ -438,7 +339,11 @@ button:focus-visible,
 }
 
 .projectsTitle {
+    font-size: 2.5rem;
     margin-bottom: 6.6rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
 }
 
 .projectsContainer {
@@ -453,87 +358,77 @@ button:focus-visible,
 .projectCard {
     flex: 1 1 260px;
     max-width: 300px;
-    background-color: var(--surface);
-    border: 1px solid var(--border);
+    background-color: white;
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: hidden;
 }
 
 .projectImage {
-    width: calc(100% + 4rem);
+    width: 100%;
     height: 180px;
-    margin: -2rem -2rem 1.5rem;
+    margin-bottom: 1.5rem;
     overflow: hidden;
-    background-color: var(--accentSoft);
+    border-radius: 8px;
+    background-color: #eee;
 }
 
 .projectImage img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .projectCard h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
 }
 
 .projectCard p {
     font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text);
+    color: #444;
     margin-bottom: auto;
 }
 
 .projectBtn {
-    display: inline-block;
     margin-top: 1.5rem;
     padding: 0.8rem 1.5rem;
-    font-family: var(--headingFont);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    border: 2px solid var(--accent);
-    background-color: var(--surface);
+    border: 1px solid black;
+    background-color: white;
     cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .projectBtn:hover {
-    background-color: var(--accent);
-    color: #FFFFFF;
+    background-color: black;
+    color: white;
     transform: scale(1.05);
 }
 
-.WorkInProgress {
-    background-color: var(--surface);
+.WorkInProgress{
+    background-color: white;
     min-height: 100vh;
 }
 
 .WorkInProgress img {
-    display: block;
     width: 96%;
     height: 500px;
-    margin: 0 auto;
-    object-fit: contain;
+    text-align: center;
+    justify-content: center;
+    
 }
 
 .WorkInProgress p {
-    font-family: var(--headingFont);
     font-size: 4rem;
-    color: var(--ink);
     text-align: center;
     margin-bottom: 2rem;
-    background-color: var(--surface);
+    justify-content: center;
+    background-color: white;
 }
 
 .backBtnContainer {
@@ -548,7 +443,12 @@ button:focus-visible,
 }
 
 .contactTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
     margin-bottom: 6.6rem;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
 }
 
 .contactSection {
@@ -559,20 +459,18 @@ button:focus-visible,
 .contactContainer {
     max-width: 40%;
     margin: 0 auto;
-    background-color: var(--surface);
+    background-color: white;
     border-radius: 12px;
     padding: 3rem 2rem;
     text-align: center;
-    border: 1px solid var(--border);
-    border-top: 4px solid var(--accent);
-    box-shadow: var(--shadow);
+    border: 1px solid black;
     margin-bottom: 5rem;
 }
 
 .contactText {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
-    color: var(--text);
+    color: #333;
 }
 
 .contactInfo {
@@ -583,243 +481,22 @@ button:focus-visible,
 
 .contactItem {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
+    color: black;
     text-decoration: none;
-    border: 1px solid var(--border);
+    border: 1px solid black;
     padding: 0.8rem 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .contactItem:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    color: #FFFFFF;
-    transform: scale(1.03);
-}
-
-.footer {
-    background-color: var(--ink);
-    padding: 1.5rem 1rem;
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+    transition: transform 0.3s
 }
 
 .footer p {
     text-align: center;
-    color: #B7C0D1;
-    font-size: 0.95rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    * {
-        transition: none !important;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    html {
-        scroll-padding-top: 5.5rem;
-    }
-
-    #desktopNav {
-        display: none;
-    }
-
-    #hamburgerNav {
-        position: fixed;
-        top: 0.75rem;
-        left: 0.75rem;
-        right: 0.75rem;
-        z-index: 1000;
-        display: flex;
-        justify-content: flex-start;
-        padding: 0.6rem 1rem;
-        background-color: rgba(255, 255, 255, 0.92);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(21, 33, 59, 0.1);
-    }
-
-    .mobileLinksHidden {
-        display: none;
-        position: absolute;
-        top: calc(100% + 0.5rem);
-        left: 0;
-        background-color: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 12px 24px rgba(21, 33, 59, 0.1);
-        flex-direction: column;
-        z-index: 100;
-        min-width: 180px;
-    }
-
-    .mobileLinksHidden.active {
-        display: flex;
-    }
-
-    .navLinksMobile {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .navLinksMobile li {
-        width: 100%;
-    }
-
-    .navLinksMobile a {
-        display: block;
-        padding: 1rem 1.25rem;
-        color: var(--ink);
-        font-family: var(--headingFont);
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 500;
-        border-bottom: none;
-    }
-
-    .navLinksMobile a:hover {
-        color: var(--accent);
-        background-color: var(--accentSoft);
-    }
-
-    .hero {
-        padding-top: 4rem;
-    }
-
-    .homeProfile {
-        margin-top: 3rem;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .leftSideHome {
-        order: 1;
-        font-size: 1.5rem;
-        flex: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        text-align: center;
-    }
-
-    .rightSideHome {
-        order: 2;
-        margin: 0;
-        padding: 0 0 1.5rem;
-        flex: none;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .centerHome {
-        order: 3;
-    }
-
-    .personalPic {
-        width: 260px;
-        height: 260px;
-    }
-
-    .CVandConnectButtonsHome,
-    .relatedButtonsHome {
-        order: 4;
-    }
-
-    .aboutMeContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .leftColumnAbout,
-    .rightColumnAbout {
-        flex: none;
-        width: 100%;
-        max-width: 700px;
-        min-height: 0;
-    }
-
-    .educationBox {
-        order: 2;
-    }
-
-    .pictureBox {
-        width: 100%;
-        height: auto;
-    }
-
-    .pictureBox img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .skillsContainer {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .skillColumn {
-        box-sizing: border-box;
-        max-width: 100%;
-        width: 100%;
-        padding: 2rem;
-    }
-
-    .skillColumn h3 {
-        text-align: center;
-        font-size: 1.4rem;
-    }
-
-    .skillColumn li {
-        font-size: 0.95rem;
-    }
-
-    .projectsContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .projectCard {
-        box-sizing: border-box;
-        max-width: 100%;
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .projectImage {
-        width: calc(100% + 3rem);
-        height: 200px;
-        margin: -1.5rem -1.5rem 1.5rem;
-    }
-
-    .projectsSection {
-        padding: 3rem 1.5rem;
-    }
-
-    .projectsTitle,
-    .skillsTitle,
-    .contactTitle {
-        margin-bottom: 3rem;
-    }
-
-    .contactContainer {
-        max-width: 100%;
-        padding: 2.5rem 1.5rem;
-    }
-
-    .WorkInProgress p {
-        font-size: 2.5rem;
-    }
+    margin-bottom: 1rem;
 }
