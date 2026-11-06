@@ -348,6 +348,7 @@ body {
 
 .projectsContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     max-width: 1500px;
     margin: 0 auto;
@@ -355,7 +356,7 @@ body {
 }
 
 .projectCard {
-    flex: 1;
+    flex: 1 1 260px;
     max-width: 300px;
     background-color: white;
     border-radius: 10px;
@@ -428,6 +429,17 @@ body {
     margin-bottom: 2rem;
     justify-content: center;
     background-color: white;
+}
+
+.backBtnContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.backBtnContainer .projectBtn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
 }
 
 .contactTitle {
