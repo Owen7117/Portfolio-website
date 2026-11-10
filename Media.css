@@ -112,6 +112,7 @@
     }
 
     .skillColumn {
+        box-sizing: border-box;
         max-width: 100%;
         width: 100%;
         padding: 2rem;
@@ -133,6 +134,7 @@
     }
 
     .projectCard {
+        box-sizing: border-box;
         max-width: 100%;
         width: 100%;
         padding: 1.5rem;
@@ -148,5 +150,19 @@
 
     .projectsTitle {
         margin-bottom: 3rem;
+    }
+
+    .contactSection {
+        padding: 3rem 1rem;
+    }
+
+    .contactContainer {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .contactItem {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
     }
 }
